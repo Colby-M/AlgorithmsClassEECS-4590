@@ -1,4 +1,5 @@
-﻿namespace Algorithms
+﻿using System.Diagnostics;
+namespace Algorithms
 {
     class AlgorithmsDotNet
     {
@@ -15,8 +16,17 @@
             if (File.Exists(args[0]))
             {
                 // first do the HashSet implementation
-                int hashCount = getWordsUsingHashSet(args[0]);
-                int treeCount = getWordsUsingTree(args[0]);
+                Stopwatch stopwatch = new();
+                stopwatch.Start();
+                getWordsUsingHashSet(args[0]);
+                stopwatch.Stop();
+                Console.WriteLine(stopwatch.Elapsed);
+                stopwatch.Reset();
+                // next, do the BinaryTreeSet implementation
+                stopwatch.Start();
+                getWordsUsingTree(args[0]);
+                stopwatch.Stop();
+                Console.WriteLine(stopwatch.Elapsed);
             }
             return;
         }
