@@ -14,6 +14,7 @@ namespace Algorithms
                 Console.Error.WriteLine("No Input File was given");
                 return;
             }
+            Console.WriteLine(args[0]);
             if (File.Exists(args[0]))
             {
                 // first do the HashSet implementation

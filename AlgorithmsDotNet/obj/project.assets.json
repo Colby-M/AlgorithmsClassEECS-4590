@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/AlgorithmsDotNet.csproj",
+      "projectUniqueName": "/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/AlgorithmsDotNet.csproj",
       "projectName": "AlgorithmsDotNet",
-      "projectPath": "/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/AlgorithmsDotNet.csproj",
+      "projectPath": "/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/AlgorithmsDotNet.csproj",
       "packagesPath": "/Users/Colby/.nuget/packages/",
-      "outputPath": "/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/",
+      "outputPath": "/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/Colby/.nuget/NuGet/NuGet.Config"
