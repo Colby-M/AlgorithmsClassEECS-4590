@@ -1,12 +1,9 @@
-﻿using System;
-using System.IO;
-
-namespace Algorithms
+﻿namespace Algorithms
 {
     class AlgorithmsDotNet
     {
         private static readonly HashSet<string> hashSet = new();
-        private static readonly BinaryTree<string> tree = new();
+        private static readonly BinaryTreeSet<string> tree = new();
         static void Main(string[] args)
         {
             if (args.Length < 1)
@@ -14,13 +11,14 @@ namespace Algorithms
                 Console.Error.WriteLine("No Input File was given");
                 return;
             }
-            Console.WriteLine(args[0]);
+            // Console.WriteLine(args[0]);
             if (File.Exists(args[0]))
             {
                 // first do the HashSet implementation
                 int hashCount = getWordsUsingHashSet(args[0]);
                 int treeCount = getWordsUsingTree(args[0]);
             }
+            return;
         }
 
         public static int getWordsUsingHashSet(string fileName)
@@ -46,19 +44,28 @@ namespace Algorithms
                         {
                             // add to dictionary
                             word = word.ToLower();
-                            bool success = hashSet.Add(word);
+                            bool success = hashSet.Add(getStringHash(word));
                             if (success)
                             {
                                 counter++;
                             }
                         }
                         word = "";
+                        if (file.EndOfStream)
+                        {
+                            break;
+                        }
                     }
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} 5 letter words.");
             }
             return counter;
+        }
+
+        public static string getStringHash(string word)
+        {
+            return word;
         }
 
         public static int getWordsUsingTree(string fileName)
@@ -84,13 +91,17 @@ namespace Algorithms
                         {
                             // add to dictionary
                             word = word.ToLower();
-                            bool success = hashSet.Add(word);
+                            bool success = tree.Add(word);
                             if (success)
                             {
                                 counter++;
                             }
                         }
                         word = "";
+                        if (file.EndOfStream)
+                        {
+                            break;
+                        }
                     }
                 }
                 file.Close();
@@ -100,14 +111,15 @@ namespace Algorithms
         }
     }
     // My implementation of a simple Binary tree that can add items
-    // and keep track of items
-    public class BinaryTree<T> where T : IComparable<T>
+    // and only return true if new item added
+    public class BinaryTreeSet<T> where T : IComparable<T>
     {
         private Node<T>? Root { get; set; }
-        public BinaryTree()
+        public BinaryTreeSet()
         {
             Root = null;
         }
+        // only add if it isn't already there
         public bool Add(T value)
         {
             if (Root == null)
@@ -132,6 +144,9 @@ namespace Algorithms
 
         public bool Add(T newValue)
         {
+            // find out if the string is less than or greater than
+            // then go that direction
+            // if that direction is null, then add a new node
             if (newValue.CompareTo(Value) < 0)
             {
                 if (Left == null)
@@ -144,7 +159,7 @@ namespace Algorithms
                     return Left.Add(newValue);
                 }
             }
-            else
+            else if (newValue.CompareTo(Value) > 0)
             {
                 if (Right == null)
                 {
@@ -155,6 +170,11 @@ namespace Algorithms
                 {
                     return Right.Add(newValue);
                 }
+            }
+            // this is the same string therefore it is already here
+            else
+            {
+                return false;
             }
         }
     }

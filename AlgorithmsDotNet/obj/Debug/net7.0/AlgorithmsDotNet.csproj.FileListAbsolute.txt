@@ -27,3 +27,4 @@
 /Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.genruntimeconfig.cache
 /Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/obj/Debug/net7.0/ref/AlgorithmsDotNet.dll
 /Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/bin/Debug/net7.0/dict1.txt
+/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/bin/Debug/net7.0/TestFile.txt

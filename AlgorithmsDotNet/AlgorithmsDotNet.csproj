@@ -9,10 +9,14 @@
 
   <ItemGroup>
     <None Remove="dict1.txt" />
+    <None Remove="TestFile.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="dict1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 </Project>
