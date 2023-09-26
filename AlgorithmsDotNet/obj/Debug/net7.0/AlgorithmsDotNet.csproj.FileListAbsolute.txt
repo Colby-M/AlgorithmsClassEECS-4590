@@ -1,0 +1,14 @@
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/bin/Debug/net7.0/AlgorithmsDotNet
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/bin/Debug/net7.0/AlgorithmsDotNet.deps.json
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/bin/Debug/net7.0/AlgorithmsDotNet.runtimeconfig.json
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/bin/Debug/net7.0/AlgorithmsDotNet.dll
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/bin/Debug/net7.0/AlgorithmsDotNet.pdb
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.AssemblyInfoInputs.cache
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.AssemblyInfo.cs
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.csproj.CoreCompileInputs.cache
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.dll
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/refint/AlgorithmsDotNet.dll
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.pdb
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/AlgorithmsDotNet.genruntimeconfig.cache
+/Users/Colby/Repos/Algorithms/AlgorithmsDotNet/obj/Debug/net7.0/ref/AlgorithmsDotNet.dll
