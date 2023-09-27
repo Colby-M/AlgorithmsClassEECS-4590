@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AlgorithmsDotNet": {
+      "commandName": "Project",
+      "commandLineArgs": "websters.txt"
+    }
+  }
+}
