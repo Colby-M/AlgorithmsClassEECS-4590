@@ -3,7 +3,7 @@ namespace Algorithms
 {
     class AlgorithmsDotNet
     {
-        private static readonly HashSet<uint> hashSet = new();
+        private static readonly HashSet<string> hashSet = new();
         private static readonly BinaryTreeSet<string> tree = new();
         static void Main(string[] args)
         {
@@ -54,7 +54,7 @@ namespace Algorithms
                         {
                             // add to dictionary
                             word = word.ToLower();
-                            bool success = hashSet.Add(getStringHash(word));
+                            bool success = hashSet.Add(word);
                             if (success)
                             {
                                 counter++;
@@ -71,22 +71,6 @@ namespace Algorithms
                 Console.WriteLine($"File has {counter} 5 letter words.");
             }
             return counter;
-        }
-
-        public static uint getStringHash(string word)
-        {
-            int i = 0;
-            uint hash = 0;
-            while (i != word.Length)
-            {
-                hash += word[i++];
-                hash += hash << 10;
-                hash ^= hash >> 6;
-            }
-            hash += hash << 3;
-            hash ^= hash >> 11;
-            hash += hash << 15;
-            return hash;
         }
 
         public static int getWordsUsingTree(string fileName)
