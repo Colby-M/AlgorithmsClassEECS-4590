@@ -137,6 +137,12 @@ namespace Algorithms
                 return Root.Add(value);
             }
         }
+
+        public void PrintTree()
+        {
+            if (Root == null) return;
+            Root.PrintTree(Root);
+        }
     }
 
     public class Node<T> where T : IComparable<T>
@@ -181,6 +187,16 @@ namespace Algorithms
             {
                 return false;
             }
+        }
+        public void PrintTree(Node<T> node)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            PrintTree(node.Left);
+            Console.WriteLine(node.Value);
+            PrintTree(node.Right);
         }
     }
 }
