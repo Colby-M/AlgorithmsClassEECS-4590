@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj": {}
+    "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj": {}
   },
   "projects": {
-    "c:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj": {
+    "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj",
+        "projectUniqueName": "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj",
         "projectName": "AlgorithmsDotNet",
-        "projectPath": "c:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj",
+        "projectPath": "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj",
         "packagesPath": "C:\\Users\\cdavi\\.nuget\\packages\\",
-        "outputPath": "c:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\obj\\",
+        "outputPath": "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cdavi\\AppData\\Roaming\\NuGet\\NuGet.Config",
