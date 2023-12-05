@@ -81,6 +81,13 @@ namespace Algorithms
                     ?? throw new ArgumentException("Error finding Node");
                 time += currentNode.Weight;
             }
+            // add in the extra return trip
+            Node lastNode = nodes.FirstOrDefault(x => x.Source == order.LastOrDefault() && x.Destination == order.FirstOrDefault())
+                ?? throw new ArgumentException("Error getting return trip");
+            time += lastNode.Weight;
+
+            // add the final destination back to start
+            order.Add(lastNode.Destination);
             return (order, time);
         }
 
