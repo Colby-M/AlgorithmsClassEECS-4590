@@ -1,10 +1,9 @@
-﻿using System.Diagnostics;
-namespace Algorithms
+﻿namespace Algorithms
 {
     class AlgorithmsDotNet
     {
-        private static readonly HashSet<uint> hashSet = new();
-        private static readonly BinaryTreeSet<string> tree = new();
+        private static List<Node> nodes = new();
+        private static int numberOfCapitals = 0;
         static void Main(string[] args)
         {
             if (args.Length < 1)
@@ -15,188 +14,51 @@ namespace Algorithms
             // Console.WriteLine(args[0]);
             if (File.Exists(args[0]))
             {
-                // first do the HashSet implementation
-                Stopwatch stopwatch = new();
-                stopwatch.Start();
-                getWordsUsingHashSet(args[0]);
-                stopwatch.Stop();
-                Console.WriteLine(stopwatch.Elapsed);
-                stopwatch.Reset();
-                // next, do the BinaryTreeSet implementation
-                stopwatch.Start();
-                getWordsUsingTree(args[0]);
-                stopwatch.Stop();
-                Console.WriteLine(stopwatch.Elapsed);
+                string[] lines = File.ReadAllLines(args[0]);
+                int.TryParse(lines.ElementAtOrDefault(0), out numberOfCapitals);
+                
+                for (int i = 1; i < lines.Length - 1; i++)
+                {
+                    // get all lines minus the first and last
+                    nodes.Add(new(lines.ElementAtOrDefault(i)));
+                }
+                if (nodes.Count != lines.Length - 2)
+                {
+                    // problem somewhere getting a node
+                    Console.Error.WriteLine("Error getting all nodes");
+                    return;
+                }
+
+                // have all nodes into list with custom objects
+                // start doing the randomized nodes and saving minimum
+                // to make sure it doesn't go to one already visited
+                // make a list of all capitals, 0-numberOfCapitals
+                // randomize from this list
+            }
+            else
+            {
+                Console.Error.WriteLine($"Unable to open file: {args[0]}");
             }
             return;
         }
-
-        public static int getWordsUsingHashSet(string fileName)
-        {
-            int counter = 0;
-            // Read in the file by characters
-            using (StreamReader file = new StreamReader(fileName))
-            {
-                char? ch;
-                string word = "";
-                while ((ch = (char)file.Read()) != null)
-                {
-                    if (char.IsLetter(ch.Value))
-                    {
-                        // add on to the word here
-                        word += ch;
-                    }
-                    else
-                    {
-                        // this is the end of a word
-                        // first check if this is a 5 letter word so far
-                        if (word.Length == 5)
-                        {
-                            // add to dictionary
-                            word = word.ToLower();
-                            bool success = hashSet.Add(getStringHash(word));
-                            if (success)
-                            {
-                                counter++;
-                            }
-                        }
-                        word = "";
-                        if (file.EndOfStream)
-                        {
-                            break;
-                        }
-                    }
-                }
-                file.Close();
-                Console.WriteLine($"File has {counter} 5 letter words.");
-            }
-            return counter;
-        }
-
-        public static uint getStringHash(string word)
-        {
-            int i = 0;
-            uint hash = 0;
-            while (i != word.Length)
-            {
-                hash += word[i++];
-                hash += hash << 10;
-                hash ^= hash >> 6;
-            }
-            hash += hash << 3;
-            hash ^= hash >> 11;
-            hash += hash << 15;
-            return hash;
-        }
-
-        public static int getWordsUsingTree(string fileName)
-        {
-            int counter = 0;
-            // Read in the file by characters
-            using (StreamReader file = new StreamReader(fileName))
-            {
-                char? ch;
-                string word = "";
-                while ((ch = (char)file.Read()) != null)
-                {
-                    if (char.IsLetter(ch.Value))
-                    {
-                        // add on to the word here
-                        word += ch;
-                    }
-                    else
-                    {
-                        // this is the end of a word
-                        // first check if this is a 5 letter word so far
-                        if (word.Length == 5)
-                        {
-                            // add to dictionary
-                            word = word.ToLower();
-                            bool success = tree.Add(word);
-                            if (success)
-                            {
-                                counter++;
-                            }
-                        }
-                        word = "";
-                        if (file.EndOfStream)
-                        {
-                            break;
-                        }
-                    }
-                }
-                file.Close();
-                Console.WriteLine($"File has {counter} 5 letter words.");
-            }
-            return counter;
-        }
-    }
-    // My implementation of a simple Binary tree that can add items
-    // and only return true if new item added
-    public class BinaryTreeSet<T> where T : IComparable<T>
-    {
-        private Node<T>? Root { get; set; }
-        public BinaryTreeSet()
-        {
-            Root = null;
-        }
-        // only add if it isn't already there
-        public bool Add(T value)
-        {
-            if (Root == null)
-            {
-                Root = new Node<T>(value);
-                return true;
-            }
-            else
-            {
-                return Root.Add(value);
-            }
-        }
     }
 
-    public class Node<T> where T : IComparable<T>
+    class Node
     {
-        public T Value { get; private set; }
-        public Node<T> Left { get; private set; } = null!;
-        public Node<T> Right { get; private set; } = null!;
+        public int Source { get; set; }
+        public int Destination { get; set; }
+        public int Weight { get; set; }
 
-        public Node(T value) => Value = value;
-
-        public bool Add(T newValue)
+        public Node(string? line)
         {
-            // find out if the string is less than or greater than
-            // then go that direction
-            // if that direction is null, then add a new node
-            if (newValue.CompareTo(Value) < 0)
-            {
-                if (Left == null)
-                {
-                    Left = new Node<T>(newValue);
-                    return true;
-                }
-                else
-                {
-                    return Left.Add(newValue);
-                }
-            }
-            else if (newValue.CompareTo(Value) > 0)
-            {
-                if (Right == null)
-                {
-                    Right = new Node<T>(newValue);
-                    return true;
-                }
-                else
-                {
-                    return Right.Add(newValue);
-                }
-            }
-            // this is the same string therefore it is already here
-            else
-            {
-                return false;
-            }
+            ArgumentNullException.ThrowIfNull(line);
+            string[] numbers = line.Split(' ');
+            int.TryParse(numbers.ElementAtOrDefault(0), out int s);
+            this.Source = s;
+            int.TryParse(numbers.ElementAtOrDefault(0), out int d);
+            this.Source = d;
+            int.TryParse(numbers.ElementAtOrDefault(0), out int w);
+            this.Source = w;
         }
     }
 }

@@ -8,19 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="dict1.txt" />
-    <None Remove="TestFile.txt" />
-    <None Remove="websters.txt" />
+    <None Remove="smallCapitals.txt" />
+    <None Remove="FullCapitals.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dict1.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFile.txt">
+    <Content Include="FullCapitals.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="websters.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="smallCapitals.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QT6sXUHe1BLRfJSi9IHebfETvPlptelV4R7VnYTgeGvWy2J1vp2gj6U+D3h7FEt+VDU2UmuCH/aq4FDUJwZC2Q==",
+  "dgSpecHash": "3KBGM2QkFz/ONTZ39BL3KTob9omAOYqFrCqyyZ8tVgWA3Kh2OXepPznWNzSYnSOPkyULlmAtekmb9LI7k/7wyQ==",
   "success": true,
-  "projectFilePath": "C:\\Repos\\AlgorithmsClassEECS-4590\\AlgorithmsDotNet\\AlgorithmsDotNet.csproj",
+  "projectFilePath": "/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/AlgorithmsDotNet.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

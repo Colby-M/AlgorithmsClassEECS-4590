@@ -1,25 +1,26 @@
-﻿<Properties StartupConfiguration="{0B0962DC-841A-40CD-9443-F8A34F5F1441}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AlgorithmsDotNet PreferredExecutionTarget="MonoDevelop.Default" />
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{0B0962DC-841A-40CD-9443-F8A34F5F1441}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AlgorithmsDotNet PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AlgorithmsDotNet/TestFile.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AlgorithmsDotNet/Program.cs">
     <Files>
-      <File FileName="AlgorithmsDotNet/Program.cs" Line="151" Column="21" />
-      <File FileName="AlgorithmsDotNet/dict1.txt" Line="1" Column="1" />
-      <File FileName="AlgorithmsDotNet/TestFile.txt" Line="9" Column="1" />
+      <File FileName="AlgorithmsDotNet/Program.cs" Line="8" Column="11" />
+      <File FileName="AlgorithmsDotNet/Properties/launchSettings.json" Line="8" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Algorithms">
+          <Node name="Algorithms" expanded="True">
             <Node name="AlgorithmsDotNet" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/Program.cs" relfile="AlgorithmsDotNet/Program.cs" line="8" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
