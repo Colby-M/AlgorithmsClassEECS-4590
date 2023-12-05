@@ -4,13 +4,13 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="AlgorithmsDotNet/Program.cs">
     <Files>
-      <File FileName="AlgorithmsDotNet/Program.cs" Line="8" Column="11" />
-      <File FileName="AlgorithmsDotNet/Properties/launchSettings.json" Line="8" Column="2" />
+      <File FileName="AlgorithmsDotNet/Program.cs" Line="62" Column="20" />
+      <File FileName="AlgorithmsDotNet/smallCapitals.txt" Line="104" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Algorithms" expanded="True">
+          <Node name="Algorithms">
             <Node name="AlgorithmsDotNet" selected="True" />
           </Node>
         </State>
@@ -18,9 +18,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Colby/Repos/Algorithms/AlgorithmsClass/AlgorithmsDotNet/Program.cs" relfile="AlgorithmsDotNet/Program.cs" line="8" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
